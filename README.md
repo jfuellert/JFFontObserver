@@ -1,6 +1,8 @@
 # JFFontObserver
 JFFontObserver is used to update fonts and / or UI when a user changes their device font. It uses a simple observer approach to run font and / or UI update blocks.
 
+![alt tag](https://raw.githubusercontent.com/jfuellert/JFFontObserver/master/Images/fontobserver.gif)
+
 ##Purpose
 The main purpose of this software is to provide developers with a simple way to add non-intrusive dynamic font support for applications.
 
