@@ -15,8 +15,8 @@ pod 'JFFontObserver'
 ```
 ##Support
 ####IOS
-Earliest tested and supported build and deployment target - iOS 6.0. 
-Latest tested and supported build and deployment target - iOS 8.4.
+Earliest tested and supported build and deployment target - iOS 6.0.   
+Latest tested and supported build and deployment target - iOS 9.0.
 
 ##ARC Compatibility
 JFFontObserver is built from ARC and is ARC-only compatible. 
