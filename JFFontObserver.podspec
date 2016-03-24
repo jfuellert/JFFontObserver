@@ -8,7 +8,7 @@ DESC
 s.homepage         = 'https://github.com/jfuellert/JFFontObserver'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'jfuellert' => 'jfuellert@gmail.com' }
-s.source           = { :git => 'https://github.com/jfuellert/JFFontObserver.git', :tag => 's.version' }
+s.source           = { :git => 'https://github.com/jfuellert/JFFontObserver.git', :tag => s.version }
 s.platform         = :ios, '6.0'
 s.requires_arc     = true
 
