@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Jeremy Fuellert. All rights reserved.
 //
 
-@import UIKit;
-
 @class JFFontObserver;
 
 /** Update fonts with a given block. */

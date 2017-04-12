@@ -21,15 +21,13 @@
     
     self = [super init];
     if(self) {
-        [self createObserversDictionary];
+        self.observers = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsCopyIn capacity:50];
+        
+#if !TARGET_OS_MAC
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFonts) name:UIContentSizeCategoryDidChangeNotification object:nil];
+#endif
     }
     return self;
-}
-
-- (void)createObserversDictionary {
-    
-    self.observers = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsCopyIn capacity:50];
 }
 
 #pragma mark - Observers
@@ -41,7 +39,11 @@
 
 + (void)addObserver:(id)observer fontUpdateBlock:(JFFontUpdate)fontUpdateBlock updateImmediatly:(BOOL)updateImmediatly {
     
+#if !TARGET_OS_MAC
     [[[self class] sharedDynamicFontObserver] addObserver:observer fontUpdateBlock:fontUpdateBlock updateImmediatly:updateImmediatly];
+#else
+    [[[self class] sharedDynamicFontObserver] addObserver:observer fontUpdateBlock:fontUpdateBlock updateImmediatly:YES];
+#endif
 }
 
 - (void)addObserver:(id)observer fontUpdateBlock:(JFFontUpdate)fontUpdateBlock {
